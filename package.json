@@ -1,0 +1,35 @@
+{
+  "name": "a-cli-of-ice-and-fire",
+  "version": "1.0.0",
+  "description": "A CLI to query the AnApiOfIceAndFire.com API",
+  "main": "cli.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint **/*.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ice",
+    "and",
+    "fire",
+    "cli",
+    "got",
+    "game",
+    "of",
+    "thrones",
+    "api"
+  ],
+  "author": "",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "inquirer": "7.1.0",
+    "prettyjson": "^1.2.1",
+    "superagent": "5.2.2"
+  }
+}
