@@ -11,14 +11,31 @@ describe("CLI - Game Of Thrones", () => {
     expect(result.includes("Sair")).toBeTruthy();
   });
 
-  // test("Main Menu", async () => {
-  //   const { UP, DOWN, ENTER } = run;
-  //   const result = await run([__dirname], [DOWN, DOWN, ENTER]);
+  test("Main Menu - Exit", async () => {
+    const { DOWN, ENTER } = run;
+    const result = await run([__dirname], [DOWN, DOWN, DOWN, ENTER]);
 
-  //   expect(result.includes("Boas vindas!")).toBeTruthy();
-  //   expect(result.includes("Listar")).toBeTruthy();
-  //   expect(result.includes("Pesquisar")).toBeTruthy();
-  //   expect(result.includes("Voltar para o menu principal")).toBeTruthy();
-  // });
+    expect(result.includes("OK... Até mais!")).toBeTruthy();
+  });
+
+
+  ["Personagens", "Livros", "Casas"]
+    .forEach((menu, index) => {
+      test(`Menu - ${menu}`, async () => {
+        const { DOWN, ENTER } = run;
+        let clicks = [];
+
+        for (let i = 0; i < index; i += 1) {
+          clicks.push(DOWN);
+        }
+
+        const result = await run([__dirname], [...clicks, ENTER]);
+
+        expect(result.includes(`Menu de ${menu}`)).toBeTruthy();
+        expect(result.includes(`Listar ${menu}`)).toBeTruthy();
+        expect(result.includes(`Pesquisar ${menu}`)).toBeTruthy();
+        expect(result.includes("Voltar para o menu principal")).toBeTruthy();
+      });
+    });
 })
 
