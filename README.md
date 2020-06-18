@@ -40,7 +40,7 @@ Você pode consultar [a documentação](https://www.anapioficeandfire.com/Docume
 
 A lista deve exibir apenas o nome do livro, e deve permitir que o usuário escolha um dos livros sobre o qual deseja ver os detalhes.
 
-> **Dica**: Para realizar a busca utilizando o nome informado pelo usuário, você precisa enviar para a API o parâmetro `name` na URL, como o exemplo a seguir: `https://www.anapioficeandfire.com/api/characters?name=A Game of Thrones`
+> **Dica**: Para realizar a busca utilizando o nome informado pelo usuário, você precisa enviar para a API o parâmetro `name` na URL, como o exemplo a seguir: `https://www.anapioficeandfire.com/api/books?name=A Game of Thrones`
 
 ### 4 - Caso nada seja digitado no momento da pesquisa, exiba todos os livros, paginados de 10 em 10
 
