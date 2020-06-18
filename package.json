@@ -4,7 +4,7 @@
   "description": "A CLI to query the AnApiOfIceAndFire.com API",
   "main": "cli.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --env=jsdom --watchAll=false --coverage",
     "lint": "eslint **/*.js",
     "start": "node index.js"
   },
@@ -26,6 +26,7 @@
     "eslint-config-airbnb": "18.1.0",
     "eslint-plugin-import": "2.20.1",
     "inquirer-test": "^2.0.1",
+    "jest": "^26.0.1",
     "prettier": "^2.0.5"
   },
   "dependencies": {
