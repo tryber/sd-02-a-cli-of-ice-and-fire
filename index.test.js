@@ -1,5 +1,9 @@
 const run = require('inquirer-test');
 
+jest.spy("./lib/utils.js", () => {
+  return jest.fn();
+});
+
 describe("CLI - Game Of Thrones", () => {
   test("Main Menu", async () => {
     const result = await run([__dirname], []);
@@ -37,5 +41,23 @@ describe("CLI - Game Of Thrones", () => {
         expect(result.includes("Voltar para o menu principal")).toBeTruthy();
       });
     });
+
+
+  ["Personagens", "Livros", "Casas"]
+    .forEach((menu, index) => {
+      test(`Listar - ${menu}`, async () => {
+        const { DOWN, ENTER } = run;
+        let clicks = [];
+
+        for (let i = 0; i < index; i += 1) {
+          clicks.push(DOWN);
+        }
+
+        const result = await run([__dirname], [...clicks, ENTER, ENTER]);
+
+        console.log(result)
+      });
+    });
+
 })
 

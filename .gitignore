@@ -280,3 +280,7 @@ $RECYCLE.BIN/
 
 .vscode
 .coverage
+
+# Mocks
+.mocks/books.js
+.mocks/houses.js
