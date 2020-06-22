@@ -1,6 +1,7 @@
 const run = require('inquirer-test');
+const utils = require("./lib/utils.js");
 
-jest.spy("./lib/utils.js", () => {
+jest.spyOn(utils, "getDataFromPage", async () => {
   return jest.fn();
 });
 
