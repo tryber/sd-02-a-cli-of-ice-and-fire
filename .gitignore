@@ -282,5 +282,5 @@ $RECYCLE.BIN/
 .coverage
 
 # Mocks
-.mocks/books.js
-.mocks/houses.js
+mocks/books.js
+mocks/houses.js
