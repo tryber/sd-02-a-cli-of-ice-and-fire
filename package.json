@@ -28,7 +28,7 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
-    "inquirer": "7.1.0",
+    "inquirer": "^7.1.0",
     "prettyjson": "^1.2.1",
     "superagent": "5.2.2"
   }
