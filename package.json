@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "inquirer": "7.1.0",
+    "inquirer-test": "^2.0.1",
+    "jest": "^26.0.1",
     "prettyjson": "^1.2.1",
     "superagent": "5.2.2"
   }
