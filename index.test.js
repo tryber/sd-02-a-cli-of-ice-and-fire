@@ -1,8 +1,6 @@
-const run = require('inquirer-test');
 const inquirer = require('inquirer');
 const superagent = require('superagent');
 const cli = require('./lib/cli');
-const utils = require('./lib/utils');
 const menus = require('./lib/menus');
 const actions = require('./lib/actions');
 const { books } = require('./lib/dependences');
