@@ -2,10 +2,10 @@ const run = require('inquirer-test');
 const inquirer = require('inquirer');
 const lib = require('./lib/cli');
 const utils = require('./lib/utils');
+const menus = require('./lib/menus');
 
 // jest.spyOn(utils, "getDataFromPage", async () => {
 //   return jest.fn();
-// });
 
 afterEach(() => {
   jest.resetAllMocks();
@@ -31,7 +31,18 @@ describe('CLI - Game Of Thrones', () => {
   test('Main Menu - Exit', async () => {
     jest.spyOn(inquirer, 'prompt').mockImplementation(async () => ({ choice: 'exit' }));
 
+    await lib.run();
+
     expect(console.log).toHaveBeenCalledWith;
     ('Ok... Até mais!');
   });
+
+  // test('Main Menu - Books', async () => {
+  //   jest.spyOn(inquirer, 'prompt').mockImplementation(async () => ({ choice: 'books' }));
+
+  //   const showMenuMocks = jest.spyOn(menus, 'run').mockImplementation(() => ({}));
+  //   // jest.mock('./lib/menus');
+
+  //   console.log(showMenuMocks.mock.calls);
+  // });
 });
