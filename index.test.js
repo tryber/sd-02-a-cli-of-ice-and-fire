@@ -37,12 +37,13 @@ describe('CLI - Game Of Thrones', () => {
     ('Ok... Até mais!');
   });
 
-  // test('Main Menu - Books', async () => {
-  //   jest.spyOn(inquirer, 'prompt').mockImplementation(async () => ({ choice: 'books' }));
+  test('Main Menu - Books', async () => {
+    jest.spyOn(inquirer, 'prompt').mockImplementation(async () => ({ choice: 'books' }));
 
-  //   const showMenuMocks = jest.spyOn(menus, 'run').mockImplementation(() => ({}));
-  //   // jest.mock('./lib/menus');
+    const showMenuMocks = jest.spyOn(menus, 'run').mockImplementation(() => ({}));
 
-  //   console.log(showMenuMocks.mock.calls);
-  // });
+    await lib.run();
+
+    expect(showMenuMocks.mock.calls[0][0].endpoint).toBe('books');
+  });
 });
