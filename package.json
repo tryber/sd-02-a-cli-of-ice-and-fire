@@ -7,7 +7,7 @@
     "test": "jest --coverage",
     "lint": "eslint **/*.js",
     "start": "node index.js",
-    "dev": "nodemon --harmony index.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "ice",
