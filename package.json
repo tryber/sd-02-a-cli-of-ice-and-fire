@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "lint": "eslint **/*.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon --harmony index.js"
   },
   "keywords": [
     "ice",
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "inquirer": "7.1.0",
+    "nodemon": "^2.0.4",
     "prettyjson": "^1.2.1",
     "superagent": "5.2.2"
   }
